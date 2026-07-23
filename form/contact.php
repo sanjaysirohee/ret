@@ -23,15 +23,19 @@ try {
     $name         = $_POST['name'] ?? '';
     $email        = $_POST['email'] ?? '';
     $phone        = $_POST['phoneno'] ?? '';
-    // $subject        = $_POST['subject'] ?? '';
-    $countrycode = $_POST['countryCode']??'';
-    $message     = $_POST['message'] ?? '';
+    $department        = $_POST['department'] ?? '';
+    $organisation        = $_POST['organisation'] ?? '';
+    $city        = $_POST['city'] ?? '';
+    $state        = $_POST['state'] ?? '';
+    $country        = $_POST['country'] ?? '';
+    $paperTitle        = $_POST['paper-title'] ?? '';
+    $uploads        = $_POST['uploads'] ?? '';
     $vpage_url = $_POST['pageurl'] ?? '';
     $page_name    =$_POST['pagename']??'';
 
     $isValidEmail = !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL);
 
- $stmt = $conn->prepare("INSERT INTO req_query_table (full_name,country_code, phone_number, email, message, page_name,page_url) VALUES (?, ?, ?, ?, ?, ?,?)");
+ $stmt = $conn->prepare("INSERT INTO req_query_table (full_name, phone_number, email, department, organisationn, city, state, country, paper_title, uploads, page message, page_name,page_url) VALUES (?, ?, ?, ?, ?, ?,?)");
     $stmt->bind_param("sssssss", $name,$countrycode, $phone, $email, $message, $page_name,$vpage_url);
 
     if ($stmt->execute()) {
