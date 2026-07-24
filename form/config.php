@@ -6,7 +6,7 @@ if($baseurl=='localhost')
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "crmwala_dbs";
+$dbname = "ret_dbs";
 }else{
  $servername = "localhost";
  $username = "crmwala_mbdbun";
