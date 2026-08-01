@@ -185,6 +185,7 @@
                 data-bs-toggle="pill"
                 data-bs-target="#tab-pane-1"
                 type="button"
+                
               >
                 <h3 class="m-0">About the journal</h3>
               </button>
@@ -1508,19 +1509,7 @@ Gupta, S. L. (2025). Artificial Intelligence in Marketing. New Delhi: XYZ Public
 
     <!-- ================= REVIEW POLICY ================= -->
 
-    <h3>1. Review Policy</h3>
-
-    <p>
-        IJAQC follows a rigorous <strong>Double-Blind Peer Review</strong> process to
-        ensure the publication of original, innovative and ethically conducted research.
-        The identities of authors and reviewers remain confidential throughout the review.
-    </p>
-
-    <p>
-        The review process evaluates originality, scientific quality, methodology,
-        significance and practical contribution while providing constructive feedback
-        to improve submitted manuscripts.
-    </p>
+    
 
     <h4 class="mt-4">1. Initial Editorial Screening</h4>
 
@@ -2480,21 +2469,21 @@ By submitting a manuscript to <strong>IJAQC</strong>, authors acknowledge that t
               <div class="tab-pane fade ms-5" id="tab-pane-6">
                 <h1>a- Review form</h1>
                 <a
-                  href="documents/review-form.pdf"
+                  href="documents/review-form-ijaqc.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
                 >
                 <h1 class="mt-5">b- Copyright form</h1>
                 <a
-                  href="documents/copyright-form.pdf"
+                  href="documents/copyright-form-ijaqc.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
                 >
                 <h1 class="mt-5">c- Paper template</h1>
                 <a
-                  href="documents/paper-template.pdf"
+                  href="documents/paper-template-ijaqc.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
@@ -3139,14 +3128,14 @@ By submitting a manuscript to <strong>IJAQC</strong>, authors acknowledge that t
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
               <p>
                 Copyright <span>©</span>
-                <strong class="px-1 sitename">Radiant Journals </strong>
+                <strong class="px-1 sitename">2026 Radiant Journals </strong>
                 <span>All Rights Reserved</span>
               </p>
             </div>
             <div class="col-md-6 text-center text-md-end">
               <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By
-              <a href="https://veloxn.com" target="_blank">Veloxn Pvt. Ltd.</a>
+              Powered By
+              <a href="https://crmwala.com" target="_blank">CRMWala Pvt. Ltd.</a>
               <br />
             </div>
           </div>
@@ -3159,6 +3148,18 @@ By submitting a manuscript to <strong>IJAQC</strong>, authors acknowledge that t
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
+    <script>
+      document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function (e) {
+        const target = document.querySelector(e.target.dataset.bsTarget);
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

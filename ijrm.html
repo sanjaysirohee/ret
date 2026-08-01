@@ -125,7 +125,7 @@
           style="max-width: 600px"
         >
           <h4 class="section-title">Our Journal</h4>
-          <h1 class="display-5 mb-4">IJRM Journal</h1>
+          <h1 class="display-5 mb-4">IJRM ISSN: 0976-318X (Print)</h1>
         </div>
         <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
           <div class="col-lg-4">
@@ -4285,21 +4285,21 @@
               <div class="tab-pane fade ms-5" id="tab-pane-6">
                 <h1>a- Review form</h1>
                 <a
-                  href="documents/review-form.pdf"
+                  href="documents/review-form-ijrm.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
                 >
                 <h1 class="mt-5">b- Copyright form</h1>
                 <a
-                  href="documents/copyright-form.pdf"
+                  href="documents/copyright-form-ijrm.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
                 >
                 <h1 class="mt-5">c- Paper template</h1>
                 <a
-                  href="documents/paper-template.pdf"
+                  href="documents/paper-template-ijrm.pdf"
                   target="_blank"
                   class="btn btn-primary py-3 px-5"
                   >Click Here</a
@@ -4884,11 +4884,11 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-               <p>Copyright <span>©</span> <strong class="px-1 sitename">Radiant Journals </strong> <span>All Rights Reserved</span></p>
+               <p>Copyright <span>©</span> <strong class="px-1 sitename">2026 Radiant Journals </strong> <span>All Rights Reserved</span></p>
             </div>
             <div class="col-md-6 text-center text-md-end">
               <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-              Designed By <a href="https://veloxn.com" target="_blank">Veloxn Pvt. Ltd.</a> <br />
+              Powered By <a href="https://crmwala.com" target="_blank">CRMWala Pvt. Ltd.</a> <br />
               
             </div>
           </div>
@@ -4901,6 +4901,18 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
+    <script>
+      document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function (e) {
+        const target = document.querySelector(e.target.dataset.bsTarget);
+
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
