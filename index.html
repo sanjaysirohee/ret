@@ -311,7 +311,7 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h4 class="section-title">Why Choose Us!</h4>
-                    <h1 class="display-5 mb-4">Why Researchers Trust IJRM?</h1>
+                    <h1 class="display-5 mb-4">Why Researchers Trust IJAQC & IJRM?</h1>
                     <p class="mb-4">The International Journal of Retailing and Marketing (IJRM) is committed to promoting
     high-quality, ethical, and impactful research through a transparent publication process,
     global accessibility, and academic excellence.</p>
@@ -630,78 +630,81 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form method="post" action="form/contact.php" enctype="multipart/form-data">
+                        <input type="hidden" value="https://radiantjournals.com/" name="pageurl">
+                        <input type="hidden" value="Home-Page" name="pagename">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
                                     <label for="name">Name*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="phone" placeholder="Contact No. (Preferably WhatsApp)" required>
-                                    <label for="phone">Contact No. (Preferably WhatsApp):*</label>
+                                    <input type="text" class="form-control" name="phoneno" id="phone" placeholder="Whatsapp Number"  pattern="[0-9]{10}"  required>
+                                    <label for="phone">Whatsapp Number*</label>
                                 </div>
                             </div>
+                            
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="E-Mail" required>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
                                     <label for="email">E-Mail:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="department" placeholder="Department" required>
+                                    <input type="text" class="form-control" id="department" name="department" placeholder="Department" required>
                                     <label for="department">Department:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="organization" placeholder="Organization" required>
+                                    <input type="text" class="form-control" id="organization" name="organisation" placeholder="Organization" required>
                                     <label for="organization">Organization:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
                                     <label for="city">City:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="state" placeholder="State" required>
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
                                     <label for="state">State:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="country" placeholder="Country" required>
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="Country" required>
                                     <label for="country">Country:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="paper-title" placeholder="Paper Title" required>
+                                    <input type="text" class="form-control" id="paper-title" name="paper-title" placeholder="Paper Title" required>
                                     <label for="paper-title">Paper Title:*</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="file" class="form-control" id="upload" placeholder="Upload (Allowed file types: doc,docx)" required>
-                                    <label for="upload"> Upload (Allowed file types: doc,docx) </label>
+                                    <input type="file" class="form-control" id="upload" name="uploads" placeholder="Upload (Allowed file types: doc,docx)" accept=".jpg,.png,.pdf,.docx" required>
+                                    <label for="upload" style="font-size:14px">Upload(Allowed file types:doc,docx) *</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input class="form-control" placeholder="Enter Captcha" id="captcha" required>
+                                    <input class="form-control" placeholder="Enter Captcha" id="captcha" name="vercode" required>
                                     <label for="captcha">Captcha</label>
                                 </div>
                             </div>
                             <div class="col-md-6 d-flex align-items-center">
                                 <!-- <div class="form-floating"> -->
                                     
-                                    <img src="form/captcha.php">
+                                    <img src="form/captcha.php" >
                                 <!-- </div> -->
                             </div>
                             <div class="col-12">

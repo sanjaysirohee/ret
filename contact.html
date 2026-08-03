@@ -158,7 +158,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                     <form method="post" action="form/contact.php" enctype="multipart/form-data">
-                        <input type="hidden" value="https://radiantjournals.com/" name="pageurl">
+                        <input type="hidden" value="https://radiantjournals.com/contact" name="pageurl">
                         <input type="hidden" value="Contact-Page" name="pagename">
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -169,10 +169,24 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" name="phoneno" id="phone" placeholder="Contact No. (Preferably WhatsApp)" required>
-                                    <label for="phone">Contact No. (Preferably WhatsApp):*</label>
+                                    <input type="text" class="form-control" name="phoneno" id="phone" placeholder="Whatsapp Number"  pattern="[0-9]{10}" maxlength="10" required>
+                                    <label for="phone">Whatsapp Number*</label>
                                 </div>
                             </div>
+                            <script>
+                                const phone = document.getElementById('phoneno');
+                                const error = document.getElementById('phoneError');
+
+                                phone.addEventListener('invalid', function () {
+                                    phone.classList.add('is-invalid');
+                                    error.style.display = 'block';
+                                });
+
+                                phone.addEventListener('input', function () {
+                                    phone.classList.remove('is-invalid');
+                                    error.style.display = 'none';
+                                });
+					</script>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
@@ -218,7 +232,7 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="file" class="form-control" id="upload" name="uploads" placeholder="Upload (Allowed file types: doc,docx)" accept=".jpg,.png,.pdf,.docx" required>
-                                    <label for="upload">Upload(Allowed file types:doc,docx) *</label>
+                                    <label for="upload" style="font-size:14px">Upload(Allowed file types:doc,docx) *</label>
                                 </div>
                             </div>
                             <div class="col-md-6">

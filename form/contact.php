@@ -12,7 +12,6 @@ if (isset($_POST['vercode'])) {
   }
 }
 
-echo "hii";
 
 require __DIR__ . '/PHPMailer/Exception.php';
 require __DIR__ . '/PHPMailer/PHPMailer.php';
@@ -139,7 +138,7 @@ try {
                 }
                 }
                 }
-                // echo "<script>alert('✔️ Message has been sent successfully!'); window.location.href='/';</script>";
+                echo "<script>alert('✔️ Message has been sent successfully!'); window.location.href='../thankyou.html';</script>";
 }
  catch (Exception $e) {
     echo "<pre>";
