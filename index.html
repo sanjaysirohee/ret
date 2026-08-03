@@ -642,11 +642,24 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" name="phoneno" id="phone" placeholder="Whatsapp Number"  pattern="[0-9]{10}"  required>
+                                    <input type="text" class="form-control" name="phoneno" id="phone" placeholder="Whatsapp Number"  pattern="[0-9]{10}" maxlength="10" required>
                                     <label for="phone">Whatsapp Number*</label>
                                 </div>
                             </div>
-                            
+                            <script>
+                                const phone = document.getElementById('phoneno');
+                                const error = document.getElementById('phoneError');
+
+                                phone.addEventListener('invalid', function () {
+                                    phone.classList.add('is-invalid');
+                                    error.style.display = 'block';
+                                });
+
+                                phone.addEventListener('input', function () {
+                                    phone.classList.remove('is-invalid');
+                                    error.style.display = 'none';
+                                });
+					</script>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
@@ -692,7 +705,7 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="file" class="form-control" id="upload" name="uploads" placeholder="Upload (Allowed file types: doc,docx)" accept=".jpg,.png,.pdf,.docx" required>
-                                    <label for="upload" style="font-size:14px">Upload(Allowed file types:doc,docx) *</label>
+                                    <label for="upload" style="font-size:12px">Upload(Allowed file types:doc,docx) *</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
