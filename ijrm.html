@@ -4389,159 +4389,104 @@
                         </div> -->
               <div class="tab-pane fade" id="tab-pane-5">
                 <h1 class="mb-3">SUBMIT MANUSCRIPT</h1>
-                <form>
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Name"
-                          required
-                        />
-                        <label for="name">Name*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="number"
-                          class="form-control"
-                          id="phone"
-                          placeholder="Contact No. (Preferably WhatsApp)"
-                          required
-                        />
-                        <label for="phone"
-                          >Contact No. (Preferably WhatsApp):*</label
-                        >
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          placeholder="E-Mail"
-                          required
-                        />
-                        <label for="email">E-Mail:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="department"
-                          placeholder="Department"
-                          required
-                        />
-                        <label for="department">Department:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="organization"
-                          placeholder="Organization"
-                          required
-                        />
-                        <label for="organization">Organization:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="city"
-                          placeholder="City"
-                          required
-                        />
-                        <label for="city">City:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="state"
-                          placeholder="State"
-                          required
-                        />
-                        <label for="state">State:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="country"
-                          placeholder="Country"
-                          required
-                        />
-                        <label for="country">Country:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="paper-title"
-                          placeholder="Paper Title"
-                          required
-                        />
-                        <label for="paper-title">Paper Title:*</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          type="file"
-                          class="form-control"
-                          id="upload"
-                          placeholder="Upload (Allowed file types: doc,docx)"
-                          required
-                        />
-                        <label for="upload"
-                          >Upload (Allowed file types: doc,docx) .**</label
-                        >
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-floating">
-                        <input
-                          class="form-control"
-                          placeholder="Enter Captcha"
-                          id="captcha"
-                          required
-                        />
-                        <label for="captcha">Captcha</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6 d-flex align-items-center">
-                      <!-- <div class="form-floating"> -->
+                <form method="post" action="form/contact.php" enctype="multipart/form-data">
+                        <input type="hidden" value="https://radiantjournals.com/contact" name="pageurl">
+                        <input type="hidden" value="Contact-Page" name="pagename">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name" required>
+                                    <label for="name">Name*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" name="phoneno" id="phone" placeholder="Whatsapp Number"  pattern="[0-9]{10}" maxlength="10" required>
+                                    <label for="phone">Whatsapp Number*</label>
+                                </div>
+                            </div>
+                            <script>
+                                const phone = document.getElementById('phoneno');
+                                const error = document.getElementById('phoneError');
 
-                      <img src="form/captcha.php" />
-                      <!-- </div> -->
-                    </div>
-                    <div class="col-12">
-                      <button class="btn btn-primary w-100 py-3" type="submit">
-                        Submit
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                                phone.addEventListener('invalid', function () {
+                                    phone.classList.add('is-invalid');
+                                    error.style.display = 'block';
+                                });
+
+                                phone.addEventListener('input', function () {
+                                    phone.classList.remove('is-invalid');
+                                    error.style.display = 'none';
+                                });
+					</script>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-Mail" required>
+                                    <label for="email">E-Mail:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="department" name="department" placeholder="Department" required>
+                                    <label for="department">Department:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="organization" name="organisation" placeholder="Organization" required>
+                                    <label for="organization">Organization:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+                                    <label for="city">City:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="state" name="state" placeholder="State" required>
+                                    <label for="state">State:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="country" name="country" placeholder="Country" required>
+                                    <label for="country">Country:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="paper-title" name="paper-title" placeholder="Paper Title" required>
+                                    <label for="paper-title">Paper Title:*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="upload" name="uploads" placeholder="Upload (Allowed file types: doc,docx)" accept=".jpg,.png,.pdf,.docx" required>
+                                    <label for="upload" style="font-size:12px">Upload(Allowed file types:doc,docx) *</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input class="form-control" placeholder="Enter Captcha" id="captcha" name="vercode" required>
+                                    <label for="captcha">Captcha*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex align-items-center">
+                                <!-- <div class="form-floating"> -->
+                                    
+                                    <img src="form/captcha.php" >
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
               </div>
               <div class="tab-pane fade" id="tab-pane-10">
-                <h1 class="mb-3">Reviewers list of IJAQC</h1>
+                <h1 class="mb-3">Reviewers list of IJRM</h1>
                <div class="team-item">
     <h5>Dr. Priyanka Gupta</h5>
     <p>Assistant Professor</p>
