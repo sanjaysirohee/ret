@@ -80,7 +80,7 @@ try {
 
                     $mail->setFrom('emails@radiantjournals.com', 'Radiant Journals');
                     if ($isValidEmail) $mail->addReplyTo($email, $name);
-                    $mail->addAddress('emails@radiantjournals.com', 'Radiant Journals');
+                    $mail->addAddress('radianteducationtrust@gmail.com', 'Radiant Journals');
                     $mail->addAttachment($destination, $fileName);
                     $mail->isHTML(true);
                     $mail->Subject = "New Article Submission";
@@ -117,17 +117,7 @@ try {
                     $mail->Subject = 'We have received your message';
                     $mail->Body = "
                         <p>Dear <b>{$name}</b>,</p>
-                        <p><strong>Phone No:</strong> {$phone}</p>
-                        <p><strong>Email :</strong> {$email}</p>
-                        <p><strong>Department :</strong> {$department}</p>
-                        <p><strong>Organisation :</strong> {$organisation}</p>
-                        <p><strong>City :</strong> {$city}</p>
-                        <p><strong>State :</strong> {$state}</p>
-                        <p><strong>Country :</strong> {$country}</p>
-                        <p><strong>Paper Title :</strong> {$paperTitle}</p>
-                        <p><strong>Uploaded Attachment :</strong> {$destination}</p>
-                        <p>These are the given information</p>
-                        <p>Thank you for reaching out to <b>radiantjournals.com</b>. We've received your message and will get back to you soon.</p>
+                        <p>Thank you for reaching out to <b>radiantjournals.com</b>. We've received your article and will get back to you soon.</p>
                         
                         <br><p>Best regards,<br><b>Radiant Journals Team</b></p>
                     ";
