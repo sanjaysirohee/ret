@@ -4855,11 +4855,11 @@
     document.querySelectorAll('[data-bs-toggle="pill"]').forEach(tab => {
     tab.addEventListener('shown.bs.tab', function (e) {
 
-    const element = document.getElementById('tab-pane-6');
+    const element = document.querySelector(e.target.dataset.bsTarget);
     const navbar = document.querySelector('.navbar');
 
     const y = element.getBoundingClientRect().top + window.pageYOffset
-              - navbar.offsetHeight - 20;
+              - navbar.offsetHeight - 150;
 
     window.scrollTo({
         top: y,
